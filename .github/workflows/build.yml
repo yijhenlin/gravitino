@@ -7,6 +7,8 @@ on:
     branches: [ "main", "branch-*" ]
   pull_request:
     branches: [ "main", "branch-*" ]
+  workflow_dispatch:
+    branches: [ "report" ]
 
 concurrency:
   group: ${{ github.worklfow }}-${{ github.event.pull_request.number || github.ref }}
